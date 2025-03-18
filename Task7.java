@@ -2,10 +2,11 @@ abstract class Book {
     private String title;
     private String author;
 
-    public Book (String title, String author){
-        this.title=title;
-        this.author=author;
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
     }
+
     public String getTitle() {
         return title;
     }
@@ -15,11 +16,13 @@ abstract class Book {
     }
 
     abstract void displayInfo();
+}
 
 class PrintedBook extends Book {
     public PrintedBook(String title, String author) {
         super(title, author);
     }
+
     void displayInfo() {
         System.out.println("Printed Book: ");
         System.out.println("Title: " + getTitle());
@@ -28,15 +31,19 @@ class PrintedBook extends Book {
         System.out.println();
     }
 }
+
 class EBook extends Book {
     private String fileSize;
+
     public EBook(String title, String author, String fileSize) {
         super(title, author);
         this.fileSize = fileSize;
     }
+
     public String getFileSize() {
         return fileSize;
     }
+
     void displayInfo() {
         System.out.println("E-Book: ");
         System.out.println("Title: " + getTitle());
@@ -48,12 +55,13 @@ class EBook extends Book {
 }
 
 class AudioBook extends Book {
-    private double duration; 
+    private double duration;
 
     public AudioBook(String title, String author, double duration) {
         super(title, author);
         this.duration = duration;
     }
+
     public double getDuration() {
         return duration;
     }
@@ -66,8 +74,9 @@ class AudioBook extends Book {
         System.out.println("Type: Audio Book");
         System.out.println();
     }
+
 }
-}
+
 public class Task7 {
     public static void main(String[] args) {
         Book book1 = new PrintedBook("Java Programming", "John Doe");
@@ -90,6 +99,56 @@ public class Task7 {
         book8.displayInfo();
         book9.displayInfo();
     }
-    }
-    
 }
+
+// > java Task7
+// Printed Book:
+// Title: Java Programming
+// Author: John Doe
+// Type: Printed
+
+// E-Book:
+// Title: Python for Data Science
+// Author: Jane Smith
+// File Size: 15MB
+// Type: E-Book
+
+// Audio Book:
+// Title: C++ Basics
+// Author: Alice Brown
+// Duration: 5.2 hours
+// Type: Audio Book
+
+// Printed Book:
+// Title: The Great Gatsby
+// Author: F. Scott Fitzgerald
+// Type: Printed
+
+// Printed Book:
+// Title: To Kill a Mockingbird
+// Author: Harper Lee
+// Type: Printed
+
+// E-Book:
+// Title: Data Science for Beginners
+// Author: Michael Lee
+// File Size: 20MB
+// Type: E-Book
+
+// E-Book:
+// Title: Introduction to Machine Learning
+// Author: Sarah Black
+// File Size: 25MB
+// Type: E-Book
+
+// Audio Book:
+// Title: The Catcher in the Rye
+// Author: J.D. Salinger
+// Duration: 7.5 hours
+// Type: Audio Book
+
+// Audio Book:
+// Title: 1984
+// Author: George Orwell
+// Duration: 8.0 hours
+// Type: Audio Book
