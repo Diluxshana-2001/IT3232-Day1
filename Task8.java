@@ -127,7 +127,7 @@ class RetailStore {
 }
 public class Task8 {
     public static void main(String[] args) {
-        RetailStore store = new RetailStore();
+        RetailStore store = new RetailStore(5);
 
         Product apple = new Fruit("Apple", 2.5, 50);
         Product carrot = new Vegetable("Carrot", 1.2, 30);
@@ -151,3 +151,41 @@ public class Task8 {
         store.displayProducts();
     }
 }
+
+// java Task8      
+// Products in Store:
+// Fruit: Apple
+// Price: 2.5
+// Quantity: 50
+
+// Vegetable: Carrot
+// Price: 1.2
+// Quantity: 30
+
+// Grocery: Rice
+// Price: 3.0
+// Quantity: 100
+
+// Product Apple updated.
+// Updated Products:
+// Fruit: Apple
+// Price: 2.8
+// Quantity: 60
+
+// Vegetable: Carrot
+// Price: 1.2
+// Quantity: 30
+
+// Grocery: Rice
+// Price: 3.0
+// Quantity: 100
+
+// Product Carrot removed.
+// Products after removal:
+// Fruit: Apple
+// Price: 2.8
+// Quantity: 60
+
+// Grocery: Rice
+// Price: 3.0
+// Quantity: 100
