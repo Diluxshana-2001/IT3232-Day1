@@ -41,6 +41,11 @@ class Student {
             students[2] = s3;
             students[3] = s4;
             students[4] = s5;
+
+            for (Student student : students) {
+                student.printDetails();
+                System.out.println();  // Empty line for better readability
+            }
         }
     }
 }
