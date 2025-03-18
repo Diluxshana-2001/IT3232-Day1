@@ -28,6 +28,12 @@ class Task6 {
             Task6 s4 = new Task6("Peter","A004",m4);
             Task6 s5 = new Task6("Mark","A005",m5);
 
+            Student[] students = new Student[5];
+            students[0] = s1;
+            students[1] = s2;
+            students[2] = s3;
+            students[3] = s4;
+            students[4] = s5;
         }
     }
 }
