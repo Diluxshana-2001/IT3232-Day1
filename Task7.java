@@ -6,13 +6,21 @@ abstract class Book {
         this.title=title;
         this.author=author;
     }
-    
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
     abstract void displayInfo();
 
 class PrintedBook extends Book {
     public PrintedBook(String title, String author) {
         super(title, author);
     }
+
 }
 class EBook extends Book {
     private String fileSize;
