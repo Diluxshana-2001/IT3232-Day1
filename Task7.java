@@ -69,5 +69,17 @@ class AudioBook extends Book {
 }
 }
 public class Task7 {
+    public static void main(String[] args) {
+        Book book1 = new PrintedBook("Java Programming", "John Doe");
+        Book book2 = new EBook("Python for Data Science", "Jane Smith", "15MB");
+        Book book3 = new AudioBook("C++ Basics", "Alice Brown", 5.2);
+        Book book4 = new PrintedBook("The Great Gatsby", "F. Scott Fitzgerald");
+        Book book5 = new PrintedBook("To Kill a Mockingbird", "Harper Lee");
+        Book book6 = new EBook("Data Science for Beginners", "Michael Lee", "20MB");
+        Book book7 = new EBook("Introduction to Machine Learning", "Sarah Black", "25MB");
+        Book book8 = new AudioBook("The Catcher in the Rye", "J.D. Salinger", 7.5);
+        Book book9 = new AudioBook("1984", "George Orwell", 8.0);
+
+    }
     
 }
