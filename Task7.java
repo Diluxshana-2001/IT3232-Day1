@@ -80,6 +80,16 @@ public class Task7 {
         Book book8 = new AudioBook("The Catcher in the Rye", "J.D. Salinger", 7.5);
         Book book9 = new AudioBook("1984", "George Orwell", 8.0);
 
+        book1.displayInfo();
+        book2.displayInfo();
+        book3.displayInfo();
+        book4.displayInfo();
+        book5.displayInfo();
+        book6.displayInfo();
+        book7.displayInfo();
+        book8.displayInfo();
+        book9.displayInfo();
+    }
     }
     
 }
