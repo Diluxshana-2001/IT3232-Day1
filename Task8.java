@@ -70,3 +70,29 @@ class Grocery extends Product {
         System.out.println();
     }
 }
+public class Task8 {
+    public static void main(String[] args) {
+        RetailStore store = new RetailStore();
+
+        Product apple = new Fruit("Apple", 2.5, 50);
+        Product carrot = new Vegetable("Carrot", 1.2, 30);
+        Product rice = new Grocery("Rice", 3.0, 100);
+
+        store.addProduct(apple);
+        store.addProduct(carrot);
+        store.addProduct(rice);
+
+        System.out.println("Products in Store:");
+        store.displayProducts();
+
+        store.editProduct("Apple", 2.8, 60);
+
+        System.out.println("Updated Products:");
+        store.displayProducts();
+
+        store.removeProduct("Carrot");
+
+        System.out.println("Products after removal:");
+        store.displayProducts();
+    }
+}
