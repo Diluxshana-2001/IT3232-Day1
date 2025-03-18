@@ -70,6 +70,61 @@ class Grocery extends Product {
         System.out.println();
     }
 }
+
+class RetailStore {
+    private Product[] products;
+    private int productCount;
+
+    public RetailStore(int size) {
+        this.products = new Product[size];
+        this.productCount = 0;
+    }
+
+    public void addProduct(Product product) {
+        if (productCount < products.length) {
+            products[productCount] = product;
+            productCount++;
+        } else {
+            System.out.println("Store is full. Cannot add more products.");
+        }
+    }
+
+    public void editProduct(String name, double price, int quantity) {
+        for (int i = 0; i < productCount; i++) {
+            if (products[i].getName().equals(name)) {
+                products[i].setPrice(price);
+                products[i].setQuantity(quantity);
+                System.out.println("Product " + name + " updated.");
+                return;
+            }
+        }
+        System.out.println("Product not found.");
+    }
+
+    public void removeProduct(String name) {
+        for (int i = 0; i < productCount; i++) {
+            if (products[i].getName().equals(name)) {
+                for (int j = i; j < productCount - 1; j++) {
+                    products[j] = products[j + 1];
+                }
+                products[--productCount] = null;
+                System.out.println("Product " + name + " removed.");
+                return;
+            }
+        }
+        System.out.println("Product not found.");
+    }
+
+    public void displayProducts() {
+        if (productCount == 0) {
+            System.out.println("No products available.");
+            return;
+        }
+        for (int i = 0; i < productCount; i++) {
+            products[i].displayInfo();
+        }
+    }
+}
 public class Task8 {
     public static void main(String[] args) {
         RetailStore store = new RetailStore();
